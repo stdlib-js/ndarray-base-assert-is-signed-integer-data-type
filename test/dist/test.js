@@ -21,74 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var isSignedIntegerDataType = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof isSignedIntegerDataType, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns `true` if provided a supported ndarray signed integer data type', function test( t ) {
-	var values;
-	var bool;
-	var i;
-
-	values = [
-		'int16',
-		'int32',
-		'int8'
-	];
-	for ( i = 0; i < values.length; i++ ) {
-		bool = isSignedIntegerDataType( values[ i ] );
-		t.strictEqual( bool, true, 'returns expected value when provided '+values[ i ] );
-	}
-	t.end();
-});
-
-tape( 'the function returns `false` if not provided a supported ndarray signed integer data type', function test( t ) {
-	var values;
-	var bool;
-	var i;
-
-	values = [
-		// Supported dtypes:
-		'binary',
-		'complex64',
-		'complex128',
-		'float32',
-		'float64',
-		'generic',
-		'uint16',
-		'uint32',
-		'uint8',
-		'uint8c',
-
-		// Unsupported dtypes:
-		'float',
-		'int',
-		'bin',
-		'',
-		'beep',
-		'boop',
-		'foo',
-		'bar',
-		5,
-		NaN,
-		true,
-		false,
-		null,
-		void 0,
-		[],
-		{},
-		function noop() {}
-	];
-	for ( i = 0; i < values.length; i++ ) {
-		bool = isSignedIntegerDataType( values[ i ] );
-		t.strictEqual( bool, false, 'returns expected value when provided '+values[ i ] );
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });

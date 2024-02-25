@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isSignedIntegerDataType from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-signed-integer-data-type@deno/mod.js';
+import isSignedIntegerDataType from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-signed-integer-data-type@v0.2.1-deno/mod.js';
 ```
 
 #### isSignedIntegerDataType( value )
@@ -88,7 +88,7 @@ bool = isSignedIntegerDataType( 'int32' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import isSignedIntegerDataType from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-signed-integer-data-type@deno/mod.js';
+import isSignedIntegerDataType from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-signed-integer-data-type@v0.2.1-deno/mod.js';
 
 var bool = isSignedIntegerDataType( 'binary' );
 // returns false
